@@ -1,0 +1,101 @@
+:root {
+  --background-color: #140443;
+  --background-light: #8ad3d6;
+}
+
+:root,
+* {
+  margin: 0px;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: var(--background-color);
+  overflow: hidden;
+}
+
+#app {
+  height: 100vh;
+  overflow: hidden;
+  width: 100%;
+  position: relative;
+}
+
+.light-lamp-container {
+  height: 100vh;
+  overflow: hidden;
+  width: 100%;
+  position: relative;
+  /* pointer-events: none; */
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.light-lamp {
+  width: 5px;
+  background-color: var(--background-light);
+  height: 2px;
+  border-radius: 8px;
+  box-shadow: 0px 0px 10px rgba(var(--background-color), 0.2);
+  position: absolute;
+}
+
+.ball-container {
+  width: 100px;
+  z-index: 1;
+  position: relative;
+}
+
+.ball {
+  width: 100%;
+  display: block;
+}
+
+.hole {
+  position: absolute;
+  display: block;
+  z-index: 1;
+  transform: rotate(-45deg);
+}
+
+.hole-wrapper {
+  background-color: black;
+  transform-origin: 50% 50% 0;
+  width: 42px;
+  height: 25px;
+  border-radius: 50%;
+}
+
+.hole.first {
+  top: 11px;
+  left: 5%;
+}
+
+.hole.last {
+  right: 3%;
+  bottom: 9px;
+}
+
+.head {
+  top: 0;
+  width: 50px;
+  position: absolute;
+  transform: rotate(20deg) scale(0);
+}
+
+.rocket-body {
+  position: absolute;
+  width: 100px;
+  transform-origin: 50% 50% 0;
+}
+
+.rocket-fire {
+  position: absolute;
+  width: 50px;
+  transform: rotate(20deg);
+  top: 400%;
+  left: -2px;
+  opacity: 0;
+}
